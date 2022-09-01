@@ -6,6 +6,11 @@ module.exports =  {
     name: 'removexpa',
     aliases: [],
     description: '💻 Comando exclusivo de Staff',
+    category: 'Programación 💻',
+    use: '<prefix>removexpa <@user/id> <xpa>',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

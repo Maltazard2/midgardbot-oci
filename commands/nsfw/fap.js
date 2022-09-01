@@ -6,6 +6,11 @@ module.exports =  {
     name: 'fap',
     aliases: ['falopa','pajear','masturbar'],
     description: '🔞 Comandos NSFW.',
+    category: 'NSFW 🔥',
+    use: '<prefix>fap [@user/id]',
+    owner: false,
+    vip: true,
+    slash: false,
     
     async execute(client, message, args, Discord) { 
   

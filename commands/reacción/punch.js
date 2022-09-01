@@ -3,6 +3,11 @@ module.exports =  {
     name: 'punch',
     aliases: ['puñetear','golpear','golpe','puñete'],
     description: '👊 Tira un golpe a alguien.',
+    category: 'Reacción 😎',
+    use: '<prefix>punch <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'bestaff',
     aliases: ['bs','best-staff'],
     description: '💻 Comando exclusivo de Staff',
+    category: 'Programación 💻',
+    use: '<prefix>bs',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

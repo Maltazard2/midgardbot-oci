@@ -5,6 +5,11 @@ module.exports =  {
     name: 'role',
     aliases: ['rol','info-role'],
     description: '🛑 Muestra la información de un rol del servidor.\n> Uso: [prefix]role <nombrerol>`',
+    category: 'Moderación 🔒',
+    use: '<prefix>role <@rol>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

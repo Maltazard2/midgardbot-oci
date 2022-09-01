@@ -6,6 +6,11 @@ module.exports =  {
     name: 'rep',
     aliases: ['carisma','cari'],
     description: '🤠 Da un punto de carisma.',
+    category: 'Reacción 😎',
+    use: '<prefix>rep <@user/id>',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

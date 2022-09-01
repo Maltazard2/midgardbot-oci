@@ -5,6 +5,11 @@ module.exports =  {
     name: 'remove-staff',
     aliases: ['removestaff','rd'],
     description: '💻 Comando exclusivo de Staff',
+    category: 'Programación 💻',
+    use: '<prefix>remove-staff <@user/id> <diamantes>',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

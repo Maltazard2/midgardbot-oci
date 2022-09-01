@@ -8,6 +8,11 @@ module.exports =  {
     name: 'hd',
     aliases: ['fullhd'],
     description: '🔞 Comandos NSFW.',
+    category: 'NSFW 🔥',
+    use: '<prefix>hd [@user/id]',
+    owner: false,
+    vip: true,
+    slash: false,
     
     async execute(client, message, args, Discord) { 
   

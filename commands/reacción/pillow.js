@@ -3,6 +3,11 @@ module.exports =  {
     name: 'pillow',
     aliases: ['almohada','pillow-fight'],
     description: '💥 ¿Alguien dijo guerra de almohadas?',
+    category: 'Reacción 😎',
+    use: '<prefix>pillow [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
  

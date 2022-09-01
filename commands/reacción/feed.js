@@ -5,6 +5,11 @@ module.exports =  {
     name: 'feed',
     aliases: ['comer','comiendo','eat'],
     description: '😋 ¿Con hambre?.',
+    category: 'Reacción 😎',
+    use: '<prefix>feed [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

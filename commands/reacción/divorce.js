@@ -7,6 +7,11 @@ module.exports =  {
     name: 'divorce',
     aliases: [],
     description: '💔 Divórciate de tu pareja.',
+    category: 'Reacción 😎',
+    use: '<prefix>divorce <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

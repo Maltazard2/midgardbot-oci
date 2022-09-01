@@ -3,6 +3,11 @@ module.exports =  {
     name: 'messi',
     aliases: ['pulga','lionel'],
     description: '⚽ Comando VIP',
+    category: 'VIP 💎',
+    use: '<prefix>messi',
+    owner: false,
+    vip: true,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
  

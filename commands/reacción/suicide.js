@@ -5,6 +5,11 @@ module.exports =  {
     name: 'suicide',
     aliases: ['suicidar','suicidio'],
     description: '💀 ¿Te harás la automorisión?.',
+    category: 'Reacción 😎',
+    use: '<prefix>suicide',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'math',
     aliases: ['cal','calcular', 'calculadora'],
     description: '📱 Ejecuta una operación matemática básica.',
+    category: 'Utilidad 💡',
+    use: '<prefix>math <operación>',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

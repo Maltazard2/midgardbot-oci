@@ -3,6 +3,11 @@ module.exports =  {
     name: 'kcheek',
     aliases: ['kc','kiss-cheek'],
     description: '😘 Un beso en la mejilla.',
+    category: 'Reacción 😎',
+    use: '<prefix>kc <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

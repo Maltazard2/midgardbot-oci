@@ -3,6 +3,11 @@ module.exports =  {
     name: 'clorox',
     aliases: [],
     description: '🙄 ¿Te apetece un poco de clorox?.',
+    category: 'Reacción 😎',
+    use: '<prefix>clorox [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

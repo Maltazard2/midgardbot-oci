@@ -5,6 +5,11 @@ module.exports =  {
     name: 'add-staff',
     aliases: ['addstaff','ad'],
     description: '💻 Comando exclusivo de Staff',
+    category: 'Programación 💻',
+    use: '<prefix>add-staff <@user/id> <diamantes>',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

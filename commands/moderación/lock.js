@@ -5,6 +5,11 @@ module.exports =  {
     name: 'lock',
     aliases: ['cerrar','bloquear'],
     description: '🔐 Bloquea el canal mencionado o dónde se ejecuta el comando.',
+    category: 'Moderación 🔒',
+    use: '<prefix>lock [#canal]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

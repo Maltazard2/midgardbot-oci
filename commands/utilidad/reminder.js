@@ -5,6 +5,11 @@ module.exports =  {
   name: 'reminder',
   aliases: ['rm','remindme'],
   description: '⏰ Establece un recordatorio.',
+  category: 'Utilidad 💡',
+  use: '<prefix>rm <tiempo> <mensaje>',
+  owner: false,
+  vip: false,
+  slash: false,
 
   async execute(client, message, args, Discord) {
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'slap',
     aliases: ['bofetada','abofetear'],
     description: '😰 Tira una bofetada a alguien.',
+    category: 'Reacción 😎',
+    use: '<prefix>slap <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
     

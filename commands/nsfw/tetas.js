@@ -3,6 +3,11 @@ module.exports =  {
   name: 'tetas',
   aliases: ['boobs'],
   description: '🔞 Comandos NSFW.',
+  category: 'NSFW 🔥',
+  use: '<prefix>tetas [@user/id]',
+  owner: false,
+  vip: false,
+  slash: false,
   
   async execute(client, message, args, Discord) { 
 

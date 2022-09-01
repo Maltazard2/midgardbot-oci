@@ -6,6 +6,11 @@ module.exports =  {
     name: 'jumbo',
     aliases: ['jb','emoji'],
     description: '👀 Ver en grande un emoji.',
+    category: 'Utilidad 💡',
+    use: '<prefix>jumbo <emoji> [-s]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

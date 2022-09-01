@@ -3,6 +3,11 @@ module.exports =  {
     name: 'user',
     aliases: ['infouser','usuario'],
     description: '🕵️‍♂️ Muestra la información de un usuario en el servidor.',
+    category: 'Utilidad 💡',
+    use: '<prefix>user [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

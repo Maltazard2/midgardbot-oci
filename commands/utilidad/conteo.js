@@ -3,6 +3,11 @@ module.exports =  {
     name: 'conteo',
     aliases: [],
     description: '⏳ Realizar una cuenta regresiva.',
+    category: 'Utilidad 💡',
+    use: '<prefix>conteo <cuenta>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

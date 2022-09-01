@@ -5,6 +5,11 @@ module.exports =  {
     name: 'enviarmd',
     aliases: ['enviar-dm','enviardm','enviar-md'],
     description: '💻 Envía un mensaje del bot al dm del usuario mencionado.',
+    category: 'Programación 💻',
+    use: '<prefix>enviarmd <@user/id> <mensaje>',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

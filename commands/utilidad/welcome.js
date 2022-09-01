@@ -3,6 +3,11 @@ module.exports =  {
     name: 'welcome',
     aliases: ['wlc','bienvenido','bienvenida'],
     description: '🤞 Muestra un embed de bienvenida.',
+    category: 'Utilidad 💡',
+    use: '<prefix>wlc <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'borradores',
     aliases: ['soloowner'],
     description: '💻 Actualización de comandos.',
+    category: 'Programación 💻',
+    use: '<prefix>borradores',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

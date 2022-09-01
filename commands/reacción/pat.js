@@ -8,6 +8,11 @@ module.exports =  {
     name: 'pat',
     aliases: ['acariciar','caricia'],
     description: '🤭 ¿Y esa caricia?.',
+    category: 'Reacción 😎',
+    use: '<prefix>pat <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

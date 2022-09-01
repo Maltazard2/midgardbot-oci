@@ -3,6 +3,11 @@ module.exports =  {
     name: 'setact',
     aliases: ['set-activity'],
     description: '💻 Cambiar el estado de actividad del bot.',
+    category: 'Programación 💻',
+    use: '<prefix>setact <activity>',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

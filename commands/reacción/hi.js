@@ -3,6 +3,11 @@ module.exports =  {
     name: 'hi',
     aliases: ['hola','saludar'],
     description: '👋 Saluda a un miembro del servidor o a todos.',
+    category: 'Reacción 😎',
+    use: '<prefix>hi [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

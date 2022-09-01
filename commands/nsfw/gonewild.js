@@ -8,6 +8,11 @@ module.exports =  {
     name: 'gonewild',
     aliases: [],
     description: '🔞 Comandos NSFW.',
+    category: 'NSFW 🔥',
+    use: '<prefix>gonewild [@user/id]',
+    owner: false,
+    vip: true,
+    slash: false,
     
     async execute(client, message, args, Discord) { 
   

@@ -5,7 +5,12 @@ module.exports =  {
     
     name: 'poll',
     aliases: ['encuesta'],
-    description: '📈 Realizar una encuesta con hasta 10 opciones.\n[prefix]poll pregunta - opción1 - opción2 - opción3 [opcional]...`',
+    description: '📈 Realizar una encuesta con hasta 10 opciones.',
+    category: 'Utilidad 💡',
+    use: '<prefix>poll <pregunta> - <opción1> - <opción2> - [+opciones]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -3,6 +3,11 @@ module.exports =  {
     name: 'culo',
     aliases: ['ass','trasero'],
     description: '🔞 Comandos NSFW.',
+    category: 'NSFW 🔥',
+    use: '<prefix>ass [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
     
     async execute(client, message, args, Discord) { 
   

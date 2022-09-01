@@ -6,6 +6,11 @@ module.exports =  {
     name: 'lxp',
     aliases: [],
     description: '💻 Comando exclusivo de Staff',
+    category: 'Programación 💻',
+    use: '<prefix>lxp',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

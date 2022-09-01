@@ -3,6 +3,11 @@ module.exports =  {
     name: 'mbservers',
     aliases: ['mbs'],
     description: '💻 Comprueba en qué servidores está el bot.',
+    category: 'Programación 💻',
+    use: '<prefix>mbs',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
     

@@ -9,6 +9,11 @@ module.exports =  {
     name: 'autonsfw',
     aliases: [],
     description: '🔞 Comandos NSFW.',
+    category: 'NSFW 🔥',
+    use: '<prefix>autonsfw <tiempo>',
+    owner: true,
+    vip: true,
+    slash: false,
     
     async execute(client, message, args, Discord) { 
   

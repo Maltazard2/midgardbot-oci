@@ -5,6 +5,11 @@ module.exports =  {
     name: 'happy',
     aliases: ['feliz','alegre','smile'],
     description: '😀 Demuestra tu modo feliz.',
+    category: 'Reacción 😎',
+    use: '<prefix>happy',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

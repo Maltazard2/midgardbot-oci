@@ -6,6 +6,11 @@ module.exports =  {
     name: 'xpi',
     aliases: [],
     description: '💻 Comando exclusivo de Staff',
+    category: 'Programación 💻',
+    use: '<prefix>xpi <@user/id> <xpi>',
+    owner: true,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

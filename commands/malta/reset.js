@@ -3,6 +3,11 @@ module.exports =  {
     name: 'reset',
     aliases: [],
     description: '💻 Reinicio de comandos.',
+    category: 'Programación 💻',
+    use: '<prefix>reset',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

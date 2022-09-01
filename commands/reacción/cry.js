@@ -3,6 +3,11 @@ module.exports =  {
     name: 'cry',
     aliases: ['llorar'],
     description: '😭 Mood Sad 2.0.',
+    category: 'Reacción 😎',
+    use: '<prefix>cry [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

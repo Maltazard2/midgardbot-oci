@@ -5,6 +5,11 @@ module.exports =  {
     name: 'clear',
     aliases: ['limpiar','borrar'],
     description: '🧹 Elimina mensajes de un canal.',
+    category: 'Moderación 🔒',
+    use: '<prefix>clear <cantidad>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

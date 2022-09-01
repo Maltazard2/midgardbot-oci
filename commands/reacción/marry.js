@@ -7,6 +7,11 @@ module.exports =  {
     name: 'marry',
     aliases: [],
     description: '💍 Contrae matrimonio con algún miembro del servidor. Sólo puedes casarte una única vez.',
+    category: 'Reacción 😎',
+    use: '<prefix>marry <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

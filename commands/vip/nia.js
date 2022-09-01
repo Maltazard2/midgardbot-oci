@@ -5,6 +5,11 @@ module.exports =  {
     name: 'nia',
     aliases: ['ninini'],
     description: '👓 Convierte las vocales de una oración en "i"',
+    category: 'VIP 💎',
+    use: '<prefix>nia <texto>',
+    owner: false,
+    vip: true,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

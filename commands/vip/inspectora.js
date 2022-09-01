@@ -3,6 +3,11 @@ module.exports =  {
     name: 'inspectora',
     aliases: ['inspeccciones','inspeccionar','inspección','inspeccion'],
     description: '👓 Revisa tus niveles según Inspectora',
+    category: 'VIP 💎',
+    use: '<prefix>inspectora',
+    owner: false,
+    vip: true,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

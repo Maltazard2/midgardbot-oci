@@ -5,6 +5,11 @@ module.exports =  {
     name: 'update',
     aliases: [],
     description: '💻 Actualización de Evento Ready - Activity.',
+    category: 'Programación 💻',
+    use: '<prefix>update',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

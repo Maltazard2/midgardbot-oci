@@ -5,6 +5,11 @@ module.exports =  {
   name: 'exitserver',
   aliases: [],
   description: '💻 Sacar al bot de algún servidor.',
+  category: 'Programación 💻',
+  use: '<prefix>exitserver <idserver>',
+  owner: true,
+  vip: false,
+  slash: false,
 
   async execute(client, message, args, Discord) {
  

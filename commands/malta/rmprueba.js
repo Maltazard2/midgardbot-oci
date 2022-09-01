@@ -6,6 +6,11 @@ module.exports =  {
   name: 'rmprueba',
   aliases: [],
   description: '⏰ Establece un recordatorio.',
+  category: 'Programación 💻',
+  use: '<prefix>rmprueba',
+  owner: true,
+  vip: false,
+  slash: false,
 
   async execute(client, message, args, Discord) {
 

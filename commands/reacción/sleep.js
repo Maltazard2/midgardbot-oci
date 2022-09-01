@@ -5,6 +5,11 @@ module.exports =  {
     name: 'sleep',
     aliases: ['durmiendo','dormir','mimir'],
     description: '😴 ¿Ya tienes sueño?.',
+    category: 'Reacción 😎',
+    use: '<prefix>sleep [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

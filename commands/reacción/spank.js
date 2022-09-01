@@ -3,6 +3,11 @@ module.exports =  {
     name: 'spank',
     aliases: ['nalgada'],
     description: '🍑 Nalguea a alguien.',
+    category: 'Reacción 😎',
+    use: '<prefix>spank <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
  

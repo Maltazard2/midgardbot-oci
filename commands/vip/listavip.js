@@ -5,6 +5,11 @@ module.exports =  {
     name: 'listavip',
     aliases: ['lista-vip','lvip','vip'],
     description: '💻 Comando exclusivo de Programación',
+    category: 'VIP 💎',
+    use: '<prefix>lvip',
+    owner: true,
+    vip: true,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

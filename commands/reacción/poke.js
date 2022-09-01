@@ -5,6 +5,11 @@ module.exports =  {
     name: 'poke',
     aliases: ['molestar','fastidiar'],
     description: '🙄 ¡Molestar!.',
+    category: 'Reacción 😎',
+    use: '<prefix>poke [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 
