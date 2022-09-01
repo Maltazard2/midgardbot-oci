@@ -3,6 +3,10 @@ module.exports =  {
     name: 'colegiala',
     aliases: [],
     description: '🤤',
+    category: 'Disco',
+    use: '<prefix>colegiala [@user/id]',
+    owner: false,
+    vip: false,
   
     async execute(client, message, args, Discord) {
 

@@ -6,6 +6,10 @@ module.exports =  {
     name: 'removebl',
     aliases: ['remove-bl'],
     description: '⛔ Remueve a los usuarios de la Lista Negra del bot.',
+    category: 'BlackList',
+    use: '<prefix>removebl <@user/id> [reason]',
+    owner: true,
+    vip: true,
   
     async execute(client, message, args, Discord) { 
 

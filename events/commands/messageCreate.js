@@ -1,5 +1,6 @@
 const Similar = require('string-similarity');
 const { Permissions } = require('discord.js');
+const config = require('../../config.json');
 var AsciiTable = require('ascii-table')
 
 //& Modelos
@@ -26,14 +27,14 @@ module.exports = async (client, Discord, message) => {
 
         } else {
 
-            prefix = process.env.PREFIX
+            prefix = config.prefix
 
         }
 
     } catch (error) {
 
         console.log('Error al buscar Prefix en Servidor: '+ message.guild.id + ' - ' + error)
-        prefix = process.env.PREFIX
+        prefix = config.prefix
 
     }
     

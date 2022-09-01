@@ -1,4 +1,5 @@
 const serverSchema = require('../../models/serverSchema');
+const config = require('../../config.json');
 
 module.exports =  {
     
@@ -29,7 +30,7 @@ module.exports =  {
 
             } else {
 
-                prefix = process.env.PREFIX
+                prefix = config.prefix
                 svp = ''
 
             }
@@ -37,7 +38,7 @@ module.exports =  {
         } catch (error) {
 
             console.log('Error al Prefix en Servidor: '+ message.guild.id + ' - ' + error)
-            prefix = process.env.PREFIX
+            prefix = config.prefix
 
         }
 
@@ -48,11 +49,11 @@ module.exports =  {
         const helpprincipal = new Discord.MessageEmbed()
         .setTitle('Bienvenido al apartado de Ayuda 💌')
         .setAuthor({ name: 'MidgardBot' + svp, iconURL: client.user.avatarURL({ dynamic: true }) })
-        .setDescription('Hola <@' + message.author.id + '> esta es la Lista de Comandos y funciones de **MidgardBot**, te invitamos a unirte a nuestro [servidor](https://discord.gg/CM9yAmXPfC) de soporte.\n\nMi prefix en `' + message.guild.name + '` es: `' + prefix + '`\n\nPara ver la ayuda de cada comando, ejecuta: `help <comando>`\n\nPara ver los comandos por categoría, debes clickear al botón respectivo:\n\n> 📌 • Comandos de Información\n> 💡 • Comandos de Utilidad\n> 🔒 • Comandos de Moderación\n> 💰 • Comandos de Economía\n> 🤣 • Comandos de Diversión\n> 😎 • Comandos de Reacción\n> 🥂 • Comandos Exclusivos (Cafetería - Bar - Disco)\n> 🔥 • Comandos NSFW\n\n<a:flech:931432469935312937> **Muchas gracias por utilizar nuestro bot** <a:darkcrown2:886466286773739530>')
+        .setDescription('Hola <@' + message.author.id + '> esta es la lista de **comandos** y **funciones** de **MidgardBot**, además te brindamos:\n\n> <:developer:972668211365576724> [Servidor de soporte](https://discord.gg/CM9yAmXPfC)\n> <:emoji_41:989454718537465967> [Website](https://midgardbot-web.herokuapp.com/)\n> <:Worlds_Icon_Invite:989451828301287424> [Link de invitación](https://discord.com/api/oauth2/authorize?client_id=904290001196556369&permissions=1619202014423&scope=bot%20applications.commands)\n\nMi prefix en `' + message.guild.name + '` es: `' + prefix + '`\n\nPara ver la ayuda de cada comando, ejecuta: `help <comando>`\n\nPara más información de cada categoría, navega por el menú:\n\n> 🥂 • Bar | Cafetería | Disco\n> 🤣 • Diversión\n> 💰 • Economía\n> 📌 • Información\n> 🔒 • Moderación\n> 🔥 • NSFW\n > 😎 • Reacción\n> 💡 • Utilidad\n\n<a:flech:931432469935312937> **Muchas gracias por utilizar nuestro bot** <a:mbs:972669050054406174>')
         .setFooter({ text: message.author.username+'#'+message.author.discriminator, iconURL: message.author.avatarURL({ dynamic: true }) })
         .setTimestamp(new Date())
         .setColor('RANDOM')
-        .setThumbnail('https://i.imgur.com/L7CrF87.gif')
+        .setThumbnail(message.guild.iconURL() ? message.guild.iconURL({ dynamic: true, size: 2048 }) : 'https://i.imgur.com/L7CrF87.gif')
 
         const helpinfo = new Discord.MessageEmbed()
         .setTitle('📌 • Comandos De Información')
