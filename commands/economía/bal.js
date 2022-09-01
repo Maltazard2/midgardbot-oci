@@ -3,9 +3,14 @@ const userSchema = require('../../models/userSchema');
 
 module.exports =  {
     
-    name: 'bal',
-    aliases: ['balance'],
+    name: 'balance',
+    aliases: ['bal'],
     description: '👛 Mira tu balance o el de usuario en el servidor.',
+    category: 'Economía 💰',
+    use: '<prefix>bal [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

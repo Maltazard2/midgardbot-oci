@@ -4,8 +4,13 @@ const { Permissions, MessageButton } = require('discord.js');
 module.exports = { 
 
     name: 'setprefix',
-    aliases: ['set-prefix'],
+    aliases: ['set-prefix','newprefix'],
     description: '📝 Actualiza el prefix del bot en este servidor.',
+    category: 'Información 📌',
+    use: '<prefix>setprefix <prefix>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

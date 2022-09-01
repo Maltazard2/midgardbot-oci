@@ -3,8 +3,13 @@ const prefixSchema = require('../../models/serverSchema');
 module.exports =  {
     
     name: 'shop',
-    aliases: ['store','ss','tienda'],
-    description: '🏪 Muestra la tienda del Bot en el servidor.',
+    aliases: ['store','tienda','market'],
+    description: '🏪 Muestra la tienda global del Bot.',
+    category: 'Economía 💰',
+    use: '<prefix>shop',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

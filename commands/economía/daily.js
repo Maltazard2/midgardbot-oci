@@ -6,6 +6,11 @@ module.exports =  {
     name: 'daily',
     aliases: ['diaria','claim'],
     description: '🏆 Reclama tu recompensa diaria por utilizar mis comandos.\n Asegúrate de haber votado antes en Top.gg para recibir el doble de coins.',
+    category: 'Economía 💰',
+    use: '<prefix>daily',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

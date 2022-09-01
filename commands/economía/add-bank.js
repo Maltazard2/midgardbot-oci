@@ -7,6 +7,11 @@ module.exports =  {
     name: 'add-bank',
     aliases: ['addbank','add-banco'],
     description: '🔴 Sólo para administradores.',
+    category: 'Economía 💰',
+    use: '<prefix>addbank <@user/id> <monto>',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

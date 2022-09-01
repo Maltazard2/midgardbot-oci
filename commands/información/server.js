@@ -3,6 +3,11 @@ module.exports = {
     name: 'server',
     aliases: ['servidor','sv'],
     description: '🌎 Muestra la información del servidor donde se ejecuta el comando.',
+    category: 'Información 📌',
+    use: '<prefix>server',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

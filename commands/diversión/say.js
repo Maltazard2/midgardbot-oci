@@ -5,6 +5,11 @@ module.exports =  {
     name: 'say',
     aliases: ['decir'],
     description: '🔉 Hace que el bot diga un mensaje.',
+    category: 'Diversión 🤣',
+    use: '<prefix>say [mensaje]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

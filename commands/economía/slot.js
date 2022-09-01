@@ -5,7 +5,12 @@ module.exports =  {
     
     name: 'slot',
     aliases: ['slots','tragaperras','traga-perras'],
-    description: '🎰 Apuesta en el tragamonedas y gana.\n [prefix]slot <cantidad>`',
+    description: '🎰 Apuesta en el tragamonedas y gana.',
+    category: 'Economía 💰',
+    use: '<prefix>slot <apuesta>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

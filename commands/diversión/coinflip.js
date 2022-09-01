@@ -5,6 +5,11 @@ module.exports =  {
     name: 'coinflip',
     aliases: ['moneda','lanzarmoneda','monedaalaire','lanzar-moneda'],
     description: '🪙 Lanza una moneda al aire.',
+    category: 'Diversión 🤣',
+    use: '<prefix>coinflip',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

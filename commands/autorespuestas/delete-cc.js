@@ -6,10 +6,11 @@ module.exports =  {
     name: 'delete-cc',
     aliases: ['delete-auto','dcc'],
     description: '💻 Eliminar autorespuestas personalizables.',
-    category: 'AutoRespuestas',
+    category: 'AutoRespuestas 📑',
     use: '<prefix>dcc <code>',
     owner: true,
     vip: true,
+    slash: false,
 
     async execute(client, message, args, Discord) {
         

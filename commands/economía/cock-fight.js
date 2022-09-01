@@ -7,6 +7,11 @@ module.exports =  {
     name: 'cock-fight',
     aliases: ['cf'],
     description: '🐤 Apuesta en las peleas de pollos y gana más coins.\n [prefix]cf <cantidad | all>`',
+    category: 'Economía 💰',
+    use: '<prefix>cf <apuesta>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

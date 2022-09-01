@@ -8,6 +8,11 @@ module.exports =  {
     name: 'pokemon',
     aliases: ['wtp'],
     description: '🐲 Un juego divertido para adivinar el pokemón y ganar algunas monedas.',
+    category: 'Diversión',
+    use: '<prefix>pokemon 🤣',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

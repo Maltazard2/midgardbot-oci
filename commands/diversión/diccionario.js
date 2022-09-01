@@ -5,6 +5,11 @@ module.exports =  {
     name: 'diccionario',
     aliases: ['rae','significado','mean'],
     description: '🧷 Busca el significado, según la RAE, de cualquier palabra.',
+    category: 'Diversión 🤣',
+    use: '<prefix>rae <palabra>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

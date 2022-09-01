@@ -5,7 +5,12 @@ module.exports =  {
     
     name: 'top',
     aliases: ['lb'],
-    description: '📊 Muestra el Top de economía y stats.\n [prefix]top <cash | xp | rep | pat | hug | sape>`',
+    description: '📊 Muestra el Top de economía y stats.',
+    category: 'Economía 💰',
+    use: '<prefix>top <cash/xp/rep/pat/hug/sape>',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

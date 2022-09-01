@@ -5,6 +5,11 @@ module.exports =  {
     name: 'findcouples',
     aliases: ['findc','match','find','matchcouples','match-couples','emparejar','empareja'],
     description: '👫 Forma las parejas',
+    category: 'Diversión 🤣',
+    use: '<prefix>findcouples',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

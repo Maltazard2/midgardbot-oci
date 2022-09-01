@@ -7,6 +7,11 @@ module.exports =  {
     name: 'remove-money',
     aliases: ['removemoney','remove-dinero'],
     description: '🔴 Sólo para administradores.',
+    category: 'Economía 💰',
+    use: '<prefix>removemoney <@user/id> <monto>',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

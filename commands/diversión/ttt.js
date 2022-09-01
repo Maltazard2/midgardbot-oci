@@ -7,6 +7,11 @@ module.exports =  {
     name: 'ttt',
     aliases: ['3enraya','tictactoe','tresenraya'],
     description: '#️⃣ Juega Tic Tac Toe con algún miembro del servidor.',
+    category: 'Diversión 🤣',
+    use: '<prefix>ttt <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

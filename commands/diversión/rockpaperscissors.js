@@ -5,6 +5,11 @@ module.exports =  {
     name: 'rockpaperscissors',
     aliases: ['rps','ppt'],
     description: '✂ Clásico juego del Piedra - Papel - tijera',
+    category: 'Diversión 🤣',
+    use: '<prefix>rps',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

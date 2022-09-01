@@ -3,6 +3,11 @@ module.exports =  {
     name: 'morse',
     aliases: [],
     description: '🌐 Convierte un texto en código Morse o viceversa.',
+    category: 'Diversión 🤣',
+    use: '<prefix>morse <texto>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

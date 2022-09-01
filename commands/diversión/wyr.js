@@ -5,6 +5,11 @@ module.exports =  {
     name: 'wyr',
     aliases: ['wouldyourather','choose','elegir'],
     description: '🎎 ¿Qué prefieres?',
+    category: 'Diversión 🤣',
+    use: '<prefix>choose',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'vote',
     aliases: ['v'],
     description: '📩 Obtén el link de votación para el servidor en Top.gg.',
+    category: 'Información 📌',
+    use: '<prefix>vote',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'snake',
     aliases: ['gusanito'],
     description: '🐛 Clásico juego del Snake',
+    category: 'Diversión 🤣',
+    use: '<prefix>snake',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -6,6 +6,11 @@ module.exports =  {
     name: 'work',
     aliases: ['w'],
     description: '🧰 Trabaja para obtener coins.',
+    category: 'Economía 💰',
+    use: '<prefix>work',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

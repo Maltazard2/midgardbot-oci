@@ -5,6 +5,11 @@ module.exports = {
   name: 'report',
   aliases: ['reporte','reportar'],
   description: '🔴 Reporta un bug o falla del bot.',
+  category: 'Información 📌',
+  use: '<prefix>report <reporte>',
+  owner: false,
+  vip: false,
+  slash: false,
 
   async execute(client, message, args, Discord) {
 

@@ -5,18 +5,35 @@ const NSFW = require('discord-nsfw');
 const nsfw3 = new NSFW();
 
 module.exports = async (client) => {
-  
-  client.user.setPresence( 
-    {
-      status: 'online', 
-      activities: [{ 
-        
-        name: client.guilds.cache.size + ' server' + (client.guilds.cache.size === 1 ? '' : 's')+' | '+ client.users.cache.size + ' usuarios', 
-        type: 'WATCHING',
-        
-      }],
+
+  var estado = [
+
+    client.guilds.cache.size + ' server' + (client.guilds.cache.size === 1 ? '' : 's')+' | '+ client.users.cache.size + ' usuarios',
+    'Nueva actualización... Próximamente!'
+
+  ]
+
+  setInterval(() => {
+
+    for(let i = 0; i < estado.length; i++){
+
+      client.user.setPresence( 
+        {
+          status: 'online', 
+          activities: [{ 
+            
+            name: client.guilds.cache.size + ' server' + (client.guilds.cache.size === 1 ? '' : 's')+' | '+ client.users.cache.size + ' usuarios', 
+            type: 'WATCHING',
+            
+          }],
+        }
+      ) 
+
     }
-  );  
+
+  }, 60000)
+  
+   
 
   console.log('Listo!');
 

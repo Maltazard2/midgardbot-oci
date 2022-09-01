@@ -3,6 +3,11 @@ module.exports =  {
     name: 'dado',
     aliases: ['dice'],
     description: '🎲 Lanza un dado al azar.',
+    category: 'Diversión 🤣',
+    use: '<prefix>dado',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

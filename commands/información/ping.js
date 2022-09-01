@@ -3,6 +3,11 @@ module.exports =  {
     name: 'ping',
     aliases: ['latencia','lat'],
     description: '🏓 Comprueba la latencia del bot y de tus mensajes.',
+    category: 'Información 📌',
+    use: '<prefix>ping',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

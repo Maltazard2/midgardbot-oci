@@ -8,7 +8,7 @@ module.exports = async (client, Discord, member) => {
 
   //* Registro de Usuarios
 
-  console.log('========================= REGISTRO DE USUARIO =========================');
+  /*console.log('========================= REGISTRO DE USUARIO =========================');
   
   let userData
 
@@ -38,7 +38,7 @@ module.exports = async (client, Discord, member) => {
   }
   
   console.log('========================= REGISTRO DE USUARIO =========================');
-   
+  */
   //* Registro de Usuarios
 
   const guild = member.guild;

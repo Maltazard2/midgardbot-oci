@@ -5,7 +5,12 @@ module.exports =  {
     
     name: 'with',
     aliases: ['retirar','wd'],
-    description: '🏧 Retira tu dinero del banco.\n [prefix]with <cantidad | all>`',
+    description: '🏧 Retira tu dinero del banco.',
+    category: 'Economía 💰',
+    use: '<prefix>with <cantidad/all>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

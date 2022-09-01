@@ -5,6 +5,11 @@ module.exports =  {
     name: 'karaoke',
     aliases: ['help karaoke','help-karaoke'],
     description: '❗ Comandos para la categoría de Karaoke',
+    category: 'Ayuda 💌',
+    use: '<prefix>karaoke',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

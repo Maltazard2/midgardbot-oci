@@ -5,6 +5,11 @@ module.exports =  {
     name: 'footballmatch',
     aliases: ['football','futbol'],
     description: '⚽ Juega Football Match',
+    category: 'Diversión 🤣',
+    use: '<prefix>futbol',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

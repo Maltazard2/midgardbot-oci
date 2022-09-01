@@ -4,8 +4,13 @@ const blSchema = require('../../models/blSchema');
 module.exports =  {
     
     name: 'fastclick',
-    aliases: ['fastc','fc','first','fast'],
+    aliases: ['fastc','fc','first','fast','faster'],
     description: '💢 ¿Quién es más rápido?',
+    category: 'Diversión 🤣',
+    use: '<prefix>faster <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

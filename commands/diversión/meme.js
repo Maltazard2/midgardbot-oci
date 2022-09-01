@@ -5,6 +5,11 @@ module.exports =  {
     name: 'meme',
     aliases: ['memes'],
     description: '😂 Obtén memes al azar.',
+    category: 'Diversión 🤣',
+    use: '<prefix>meme',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -7,6 +7,11 @@ module.exports =  {
     name: 'buy',
     aliases: ['comprar'],
     description: '🛒 Compra un ítem de la tienda.\n [prefix]buy <item>`',
+    category: 'Economía 💰',
+    use: '<prefix>buy <ítem>',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

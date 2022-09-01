@@ -3,6 +3,11 @@ module.exports =  {
     name: 'impostor',
     aliases: ['imp'],
     description: '💣 Averigua quién es el impostor de este mundo.',
+    category: 'Diversión 🤣',
+    use: '<prefix>impostor [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

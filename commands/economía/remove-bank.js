@@ -7,6 +7,11 @@ module.exports =  {
     name: 'remove-bank',
     aliases: ['removebank','remove-banco'],
     description: '🔴 Sólo para administradores.',
+    category: 'Economía 💰',
+    use: '<prefix>removebank <@user/id> <monto>',
+    owner: true,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

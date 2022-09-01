@@ -3,6 +3,11 @@ module.exports =  {
     name: 'roll',
     aliases: [],
     description: '🔢 Saca un número al azar.',
+    category: 'Diversión 🤣',
+    use: '<prefix>roll [max]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

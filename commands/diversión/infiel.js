@@ -3,6 +3,11 @@ module.exports =  {
     name: 'infiel',
     aliases: ['infidelidad'],
     description: '💔 Descubre tu % de infidelidad.',
+    category: 'Diversión 🤣',
+    use: '<prefix>infiel [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

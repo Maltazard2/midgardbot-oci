@@ -6,10 +6,11 @@ module.exports =  {
     name: 'addbl',
     aliases: ['add-bl'],
     description: '⛔ Añade a los usuarios en la Lista Negra del bot.',
-    category: 'BlackList',
+    category: 'BlackList 🖤',
     use: '<prefix>addbl <@user/id> [reason]',
     owner: true,
     vip: true,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

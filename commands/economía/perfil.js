@@ -6,6 +6,11 @@ module.exports =  {
     name: 'perfil',
     aliases: ['profile','pp'],
     description: '⭐ Muestra tu perfil o el de un usuario.',
+    category: 'Economía 💰',
+    use: '<prefix>perfil [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

@@ -5,6 +5,11 @@ module.exports =  {
     name: 'carta',
     aliases: ['md','confession','confesión','dedicatoria'],
     description: '📩 Envía una carta, confesión o dedicatoria al md de un usuario del servidor. Para más información, ejecuta el comando [prefix]carta`.',
+    category: 'Diversión 🤣',
+    use: '<prefix>carta <@user/id> <mensaje>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -3,6 +3,11 @@ module.exports =  {
     name: '8ball',
     aliases: [],
     description: '❓ El bot responderá al azar tu pregunta.',
+    category: 'Diversión 🤣',
+    use: '<prefix>8ball <pregunta>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

@@ -3,9 +3,14 @@ const userSchema = require('../../models/userSchema');
 
 module.exports =  {
     
-    name: 'dep',
-    aliases: ['depositar'],
-    description: '🏦 Deposita tu dinero en el banco.\n [prefix]dep <cantidad | all>`',
+    name: 'depositar',
+    aliases: ['dep','guardar'],
+    description: '🏦 Deposita tu dinero en el banco.',
+    category: 'Economía 💰',
+    use: '<prefix>dep <monto/all>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) { 
 

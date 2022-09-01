@@ -7,10 +7,11 @@ module.exports =  {
     name: 'add-cc',
     aliases: ['add-auto','acc'],
     description: '💻 Agregar autorespuestas personalizables.',
-    category: 'AutoRespuestas',
+    category: 'AutoRespuestas 📑',
     use: '<prefix>acc <trigger> <response>',
     owner: true,
     vip: true,
+    slash: false,
 
     async execute(client, message, args, Discord) {
         

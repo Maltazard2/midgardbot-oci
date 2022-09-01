@@ -6,10 +6,11 @@ module.exports =  {
     name: 'bl',
     aliases: ['black-list','listanegra'],
     description: '💻 Comando exclusivo de Programación',
-    category: 'BlackList',
+    category: 'BlackList 🖤',
     use: '<prefix>bl',
     owner: true,
     vip: true,
+    slash: false,
 
     async execute(client, message, args, Discord) {
 

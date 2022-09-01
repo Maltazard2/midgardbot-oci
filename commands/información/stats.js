@@ -3,6 +3,11 @@ module.exports = {
   name: 'stats',
   aliases: ['estadística','info','estadistica','bot'],
   description: '📊 Muestra la información y el estado del bot.',
+  category: 'Información 📌',
+  use: '<prefix>stats',
+  owner: false,
+  vip: false,
+  slash: false,
 
   async execute(client, message, args, Discord) {
 

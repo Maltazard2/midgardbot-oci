@@ -3,6 +3,11 @@ module.exports =  {
     name: 'berenjena',
     aliases: ['pito','banana'],
     description: '😈 Descubre cuánto te mide.',
+    category: 'Diversión 🤣',
+    use: '<prefix>berenjena [@user/id]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

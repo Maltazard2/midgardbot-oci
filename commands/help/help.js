@@ -6,6 +6,11 @@ module.exports =  {
     name: 'help',
     aliases: ['h','ayuda','comandos','commands'],
     description: '❗ Menú de ayuda con la lista de los comandos del bot.',
+    category: 'Ayuda 💌',
+    use: '<prefix>help [comando]',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

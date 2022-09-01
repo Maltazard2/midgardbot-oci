@@ -6,6 +6,11 @@ module.exports =  {
     name: 'connect4',
     aliases: ['4enraya','cuatroenraya'],
     description: '🎮 Juega 4 En Raya con algún miembro del servidor.',
+    category: 'Diversión 🤣',
+    use: '<prefix>4enraya <@user/id>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
 

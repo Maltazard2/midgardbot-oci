@@ -5,6 +5,11 @@ module.exports = {
     name: 'suggestion',
     aliases: ['sugerencia','sugerir'],
     description: '🟡 Envía una sugerencia para mejorar el bot.',
+    category: 'Información 📌',
+    use: '<prefix>suggestion <sugerencia>',
+    owner: false,
+    vip: false,
+    slash: false,
   
     async execute(client, message, args, Discord) {
   
