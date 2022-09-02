@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const Canvas = require('canvas')
+//const Canvas = require('canvas')
 
 module.exports = {
 
@@ -37,16 +37,16 @@ module.exports = {
 
             let user = await client.users.fetch(usuario.id, {force: true})
 
-            let canvas = Canvas.createCanvas(966, 70); //Creamos un nuevo canvas.
+            /*let canvas = Canvas.createCanvas(966, 70); //Creamos un nuevo canvas.
 
-            let ctx = canvas.getContext("2d");
+            let ctx = canvas.getContext("2d");*/
 
             if (!user.hexAccentColor && !user.bannerURL() || user.bot) {
     
                 const e = new Discord.MessageEmbed()
                 .setAuthor({ name: interaction.user.tag, iconURL: interaction.user.displayAvatarURL()})
                 .setColor('RED')
-                .setDescription(`<a:Verify2:931463492677017650> | El usuario (${user.username}) no tiene un banner o un color personalizado.!`)
+                .setDescription(`<a:Verify2:931463492677017650> | El usuario (${user.username}) no tiene un banner!`)
                 
                 await interaction.deferReply().catch((e) => console.log('Error al usar slash commands: '+e))
                 await wait(500).catch((e) => console.log('Error al usar slash commands: '+e))
@@ -54,7 +54,7 @@ module.exports = {
         
             } else {
 
-                ctx.fillStyle = (await user).hexAccentColor;
+                /*ctx.fillStyle = (await user).hexAccentColor;
 
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
   
@@ -89,7 +89,7 @@ module.exports = {
 
                     }).catch((e) => console.log('Error al usar slash commands: '+e))
 
-                } else {
+                } else {*/
 
                     await interaction.deferReply().catch((e) => console.log('Error al usar slash commands: '+e))
                     await wait(500).catch((e) => console.log('Error al usar slash commands: '+e))
@@ -110,8 +110,7 @@ module.exports = {
                         ],
                     
                     }).catch((e) => console.log('Error al usar slash commands: '+e))
-                }
-            
+                
             }
 
         } catch (error) {

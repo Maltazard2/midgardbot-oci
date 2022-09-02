@@ -48,13 +48,16 @@ module.exports =  {
         }
 
         let cmd = args[0]
+        
+        const file = new Discord.MessageAttachment('img/banner.jpg')
 
         const embed = new Discord.MessageEmbed()
         .setFooter({ text: message.author.username+'#'+message.author.discriminator, iconURL: message.author.avatarURL({ dynamic: true }) })
         .setColor('RANDOM')
         .setTimestamp(new Date())
         .setThumbnail(message.guild.iconURL() ? message.guild.iconURL({ dynamic: true, size: 2048 }) : 'https://i.imgur.com/L7CrF87.gif')
-        .setImage('https://media.discordapp.net/attachments/938965106275025017/1015109962910945323/banner.jpg?width=767&height=383')
+        .setImage('attachment://banner.jpg')
+        //.setImage('https://media.discordapp.net/attachments/938965106275025017/1015109962910945323/banner.jpg?width=767&height=383')
         
         const btns_options1 = new Discord.MessageActionRow().addComponents([
       
@@ -126,7 +129,8 @@ module.exports =  {
                     .setDescription('Hola <@' + message.author.id + '> esta es la lista de **comandos** y **funciones** de **MidgardBot**, además te brindamos:\n\n> <:developer:972668211365576724> [Servidor de soporte](https://discord.gg/CM9yAmXPfC)\n> <:emoji_41:989454718537465967> [Website](https://midgardbot-web.herokuapp.com/)\n> <:Worlds_Icon_Invite:989451828301287424> [Link de invitación](https://discord.com/api/oauth2/authorize?client_id=904290001196556369&permissions=1619202014423&scope=bot%20applications.commands)\n\nMi prefix en `' + message.guild.name + '` es: `' + prefix + '`\n\nPara ver la ayuda de cada comando, ejecuta: `help <comando>`\n\nPara más información de cada categoría, navega por el menú:\n\n> 🥂 • Bar | Cafetería | Disco\n> 🤣 • Diversión\n> 💰 • Economía\n> 📌 • Información\n> 🔒 • Moderación\n> 🔥 • NSFW\n > 😎 • Reacción\n> 💡 • Utilidad\n\n<a:flech:931432469935312937> **Muchas gracias por utilizar nuestro bot** <a:mbs:972669050054406174>')
 
                 ],
-                components: [btns_options1, btns_options2]
+                components: [btns_options1, btns_options2],
+                files: [file]
               
             }).then(async m => {
                 
@@ -451,14 +455,19 @@ module.exports =  {
 
                 }
 
-                embed.setAuthor({ name: 'MidgardBot' + svp, iconURL: client.user.avatarURL({ dynamic: true }) })
-                embed.setThumbnail('https://i.imgur.com/kwMaqLo.gif')
-                embed.setDescription('<:shylove:931432905421520927> **Hola** <@' + message.author.id + '>. Bienvenid@ a mi apartado de ayuda para `' + query.name + '`.\n\n')
-                embed.addField('<a:point:953436509426581564> __Categoría__', '' + category)
-                embed.addField('<a:point:953436509426581564> __Descripción__', '' + descripcion)
-                embed.addField('<a:point:953436509426581564> __Uso__', '' + use)
-                embed.addField('<a:point:953436509426581564> __Alias__', '' + alias)
-                embed.addField('<a:fijadito:931432134797848607>', '> <a:point:953436509426581564> **VIP: **' + vip + '\n> <a:point:953436509426581564> **SLASH:** ' + slash)
+                const embed2 = new Discord.MessageEmbed()
+                .setFooter({ text: message.author.username+'#'+message.author.discriminator, iconURL: message.author.avatarURL({ dynamic: true }) })
+                .setColor('RANDOM')
+                .setTimestamp(new Date())
+                .setImage('attachment://banner.jpg')
+                .setAuthor({ name: 'MidgardBot' + svp, iconURL: client.user.avatarURL({ dynamic: true }) })
+                .setThumbnail('https://i.imgur.com/kwMaqLo.gif')
+                .setDescription('<:shylove:931432905421520927> **Hola** <@' + message.author.id + '>. Bienvenid@ a mi apartado de ayuda para `' + query.name + '`.\n\n')
+                .addField('<a:point:953436509426581564> __Categoría__', '' + category)
+                .addField('<a:point:953436509426581564> __Descripción__', '' + descripcion)
+                .addField('<a:point:953436509426581564> __Uso__', '' + use)
+                .addField('<a:point:953436509426581564> __Alias__', '' + alias)
+                .addField('<a:fijadito:931432134797848607>', '> <a:point:953436509426581564> **VIP: **' + vip + '\n> <a:point:953436509426581564> **SLASH:** ' + slash)
                 
                 const btns_options3 = new Discord.MessageActionRow().addComponents([
       
@@ -476,7 +485,7 @@ module.exports =  {
         
                 message.reply({ allowedMentions: { repliedUser: false}, 
             
-                    embeds: [embed],
+                    embeds: [embed2],
                     components: [btns_options3]
                   
                 }).then(async m => {
@@ -499,9 +508,10 @@ module.exports =  {
                                     .setAuthor({ name: 'MidgardBot' + svp, iconURL: client.user.avatarURL({ dynamic: true }) })
                                     .setTitle('Bienvenido al apartado de Ayuda 💌')
                                     .setDescription('Hola <@' + message.author.id + '> esta es la lista de **comandos** y **funciones** de **MidgardBot**, además te brindamos:\n\n> <:developer:972668211365576724> [Servidor de soporte](https://discord.gg/CM9yAmXPfC)\n> <:emoji_41:989454718537465967> [Website](https://midgardbot-web.herokuapp.com/)\n> <:Worlds_Icon_Invite:989451828301287424> [Link de invitación](https://discord.com/api/oauth2/authorize?client_id=904290001196556369&permissions=1619202014423&scope=bot%20applications.commands)\n\nMi prefix en `' + message.guild.name + '` es: `' + prefix + '`\n\nPara ver la ayuda de cada comando, ejecuta: `help <comando>`\n\nPara más información de cada categoría, navega por el menú:\n\n> 🥂 • Bar | Cafetería | Disco\n> 🤣 • Diversión\n> 💰 • Economía\n> 📌 • Información\n> 🔒 • Moderación\n> 🔥 • NSFW\n > 😎 • Reacción\n> 💡 • Utilidad\n\n<a:flech:931432469935312937> **Muchas gracias por utilizar nuestro bot** <a:mbs:972669050054406174>')
-    
+                                    
                                 ],
-                                components: [btns_options1, btns_options2]
+                                components: [btns_options1, btns_options2],
+                                files: [file]
                         
                             }).catch((e) => console.log('Error al enviar mensaje: '+e))
               
