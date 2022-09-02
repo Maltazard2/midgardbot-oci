@@ -14,7 +14,7 @@ module.exports =  {
   
     async execute(client, message, args, Discord) {
 
-        let buscarprefix, prefix, svp
+        let buscarprefix, prefix, svp, query, descripcion, alias, category, use, owner, vip, slash
         try {
 
             buscarprefix = await serverSchema.findOne({idserver: message.guild.id})
@@ -48,7 +48,6 @@ module.exports =  {
         }
 
         let cmd = args[0]
-        let query, descripcion, alias, category, use, owner, vip, slash
 
         const embed = new Discord.MessageEmbed()
         .setFooter({ text: message.author.username+'#'+message.author.discriminator, iconURL: message.author.avatarURL({ dynamic: true }) })
@@ -111,7 +110,7 @@ module.exports =  {
         
             new Discord.MessageButton()
             .setCustomId('close')
-            .setLabel('❌')
+            .setLabel('✖')
             .setStyle('DANGER'),
       
         ])
@@ -139,8 +138,8 @@ module.exports =  {
                 
                 collector.on('collect', async int => {
                   
-                    int.deferUpdate();
-               
+                    await int.deferUpdate();
+
                     if (int.customId === 'home') {
                     
                         m.edit({
@@ -239,20 +238,28 @@ module.exports =  {
           
                     } else if (int.customId === 'nsfw') {
                     
-                        m.edit({
-                      
-                            embeds: [
-                                
-                                embed
-                                .setTitle('')
-                                .setAuthor({ name: 'MidgardBot | Comandos NSFW 🔥', iconURL: client.user.avatarURL({ dynamic: true }) })
-                                .setDescription('Comandos única y exclusivamente para canales NSFW.\n\nUtilizando `' + prefix + 'help <comando>` obtienes ayuda detallada sobre cada comando.\n\nVisita mi [Website](https://midgardbot-web.herokuapp.com/) y conoce todas mis funciones.\n\n> • ~~' + client.commands.filter(c => c.category == 'NSFW 🔥' && c.vip == false && c.owner == false).map(c => c.name).join('~~\n> • ~~') + '~~\n\n' + ((client.commands.filter(c => c.category == 'NSFW 🔥' && c.vip == true && c.owner == false).map(c => c.name).length > 0) ? ('<a:fijadito:931432134797848607> ***VIP*** 💎\n> • ~~' + client.commands.filter(c => c.category == 'NSFW 🔥' && c.vip == true && c.owner == false).map(c => c.name).join('~~\n> • ~~') + '~~\n\n') : ''))
+                        if(!message.channel.nsfw){
 
-                            ],
-                            components: [btns_options1, btns_options2]
-                    
-                        }).catch((e) => console.log('Error al enviar mensaje: '+e))
-          
+                            await int.followUp({ content: 'El canal no acepta contenido NSFW, por favor, necesitas activar la restricción por edad para continuar.', ephemeral: true })
+                            
+                        } else {
+
+                            m.edit({
+                      
+                                embeds: [
+                                    
+                                    embed
+                                    .setTitle('')
+                                    .setAuthor({ name: 'MidgardBot | Comandos NSFW 🔥', iconURL: client.user.avatarURL({ dynamic: true }) })
+                                    .setDescription('Comandos única y exclusivamente para canales NSFW.\n\nUtilizando `' + prefix + 'help <comando>` obtienes ayuda detallada sobre cada comando.\n\nVisita mi [Website](https://midgardbot-web.herokuapp.com/) y conoce todas mis funciones.\n\n> • ~~' + client.commands.filter(c => c.category == 'NSFW 🔥' && c.vip == false && c.owner == false).map(c => c.name).join('~~\n> • ~~') + '~~\n\n' + ((client.commands.filter(c => c.category == 'NSFW 🔥' && c.vip == true && c.owner == false).map(c => c.name).length > 0) ? ('<a:fijadito:931432134797848607> ***VIP*** 💎\n> • ~~' + client.commands.filter(c => c.category == 'NSFW 🔥' && c.vip == true && c.owner == false).map(c => c.name).join('~~\n> • ~~') + '~~\n\n') : ''))
+    
+                                ],
+                                components: [btns_options1, btns_options2]
+                        
+                            }).catch((e) => console.log('Error al enviar mensaje: '+e))
+              
+                        }
+                        
                     } else if (int.customId === 'rea') {
                     
                         m.edit({
@@ -340,8 +347,14 @@ module.exports =  {
 
                 descripcion = query.description
                 alias = query.aliases ? query.aliases : 'No tiene'
+                use = query.use
+                category = query.category
+                owner = query.owner
+                vip = query.vip
+                slash = query.slash
 
-                if(descripcion == '🔞 Comandos NSFW.'){
+
+                if(category == 'NSFW 🔥'){
 
                     if(!message.channel.nsfw){
         
@@ -363,17 +376,32 @@ module.exports =  {
 
                     descripcion = descripcion.replace('[prefix]',prefix)
 
+                    if(descripcion.includes('<prefix>')){
+
+                        descripcion = descripcion.replace('<prefix>',prefix)
+
+                    }
+
+                }
+
+                if(use.includes('<prefix>')){
+
+                    use = use.replace('<prefix>',prefix)
+
                 }
 
                 const helpcmd = new Discord.MessageEmbed()
-                .setTitle('• Comando ' + query.name + ' •')
                 .setAuthor({ name: 'MidgardBot' + svp, iconURL: client.user.avatarURL({ dynamic: true }) })
                 .setFooter({ text: message.author.username+'#'+message.author.discriminator, iconURL: message.author.avatarURL({ dynamic: true }) })
                 .setTimestamp(new Date())
-                .setThumbnail('https://i.imgur.com/kwMaqLo.gif')
                 .setColor('RANDOM')
-                .addField('Descripción: ','<a:flech:931432469935312937> ' + descripcion)
-                .addField('Aliases: ','<a:flech:931432469935312937> ' + alias)
+                .setThumbnail('https://i.imgur.com/kwMaqLo.gif')
+                .setDescription('<:shylove:931432905421520927> **Hola** <@' + message.author.id + '>. Bienvenid@ a mi apartado de ayuda para `' + query.name + '`.\n\n')
+                .addField('<a:point:953436509426581564> __Categoría__', '' + category)
+                .addField('<a:point:953436509426581564> __Descripción__', '' + descripcion)
+                .addField('<a:point:953436509426581564> __Uso__', '`' + uso + '`')
+                .addField('<a:point:953436509426581564> __Alias__', '' + alias)
+                .addField('<a:fijadito:931432134797848607>', '> <a:point:953436509426581564> **VIP: **' + vip + '\n> <a:point:953436509426581564> **SLASH:** ' + slash)
 
                 message.reply({ allowedMentions: { repliedUser: false}, 
             

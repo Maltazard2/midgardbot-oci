@@ -1,4 +1,4 @@
-const Canvas = require('canvas')
+//const Canvas = require('canvas')
 
 module.exports =  {
     
@@ -15,9 +15,9 @@ module.exports =  {
 
         let usuario = message.guild.members.resolve(message.mentions.users.first() || client.users.cache.get(args[0])) || message.author;
 
-        let canvas = Canvas.createCanvas(966, 70); //Creamos un nuevo canvas.
+        /*let canvas = Canvas.createCanvas(966, 70); //Creamos un nuevo canvas.
 
-        let ctx = canvas.getContext("2d");
+        let ctx = canvas.getContext("2d");*/
 
         let user = await client.users.fetch(usuario.id, {force: true})
 
@@ -26,19 +26,19 @@ module.exports =  {
             const e = new Discord.MessageEmbed()
             .setAuthor({ name: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true}) })
             .setColor('RED')
-            .setDescription(`<a:Verify2:931463492677017650> | El usuario (${user.username}) no tiene un banner o un color personalizado.!`)
+            .setDescription(`<a:Verify2:931463492677017650> | El usuario (${user.username}) no tiene un banner!`)
         
             return message.reply({ embeds: [e]}).catch((e) => console.log('Error al enviar mensaje: '+e))
     
         }
 
-        ctx.fillStyle = (await user).hexAccentColor;
+        /*ctx.fillStyle = (await user).hexAccentColor;
 
         ctx.fillRect(0, 0, canvas.width, canvas.height);
   
-        let img = await canvas.toBuffer();
+        let img = await canvas.toBuffer();*/
 
-        if(!user.bannerURL()) return message.reply({ allowedMentions: { repliedUser: false}, 
+        /*if(!user.bannerURL()) return message.reply({ allowedMentions: { repliedUser: false}, 
             
             files: [{
               
@@ -61,7 +61,7 @@ module.exports =  {
 
             ],
           
-        }).catch((e) => console.log('Error al enviar mensaje: '+e))
+        }).catch((e) => console.log('Error al enviar mensaje: '+e))*/
 
         message.reply({ allowedMentions: { repliedUser: false}, 
             
