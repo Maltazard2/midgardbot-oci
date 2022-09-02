@@ -10,7 +10,7 @@ module.exports =  {
     use: '<prefix>poll <pregunta> - <opción1> - <opción2> - [+opciones]',
     owner: false,
     vip: false,
-    slash: false,
+    slash: true,
   
     async execute(client, message, args, Discord) {
 

@@ -9,7 +9,7 @@ module.exports =  {
     use: '<prefix>vote',
     owner: true,
     vip: false,
-    slash: false,
+    slash: true,
   
     async execute(client, message, args, Discord) {
 

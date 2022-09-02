@@ -1504,6 +1504,23 @@ module.exports = async (client, Discord, message) => {
 
     } else{
 
+        if(cmd.owner == true){
+
+            if(message.author.id != config.IdOwner){
+                
+                const e = new Discord.MessageEmbed()
+                .setAuthor({ name: message.author.username+'#'+message.author.discriminator, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                .setColor('RED')
+                .setDescription(`<a:Verify2:931463492677017650> | El comando **${command}** no existe!\n\n> Sugerencias: No tengo sugerencias`)
+                
+                return message.channel.send({embeds: [e]})
+                .then(m => setTimeout(() => m.delete(), 15000))
+                .catch((e) => console.log('Error al enviar mensaje: '+e))
+
+            }
+
+        }
+
         try {
 
             cmd.execute(client, message, args, Discord)

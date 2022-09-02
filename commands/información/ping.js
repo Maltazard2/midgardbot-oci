@@ -7,7 +7,7 @@ module.exports =  {
     use: '<prefix>ping',
     owner: false,
     vip: false,
-    slash: false,
+    slash: true,
 
     async execute(client, message, args, Discord) {
 

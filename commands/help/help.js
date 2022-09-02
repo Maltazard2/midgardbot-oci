@@ -351,7 +351,22 @@ module.exports =  {
                 vip = query.vip
                 slash = query.slash
 
+                if(owner == true){
 
+                    if(message.author.id != config.IdOwner){
+                        
+                        return message.reply({ embeds: [
+
+                            new Discord.MessageEmbed()
+                            .setAuthor({ name: message.author.tag, iconURL: message.author.displayAvatarURL() })
+                            .setColor('RED')
+                            .setDescription('<a:Verify2:931463492677017650> | No se encontró ningún comando con ese nombre o alias!')
+                    
+                        ]}).then(m => setTimeout(() => m.delete(), 15000)).catch((e) => console.log('Error al enviar mensaje: '+e))
+                    
+                    }
+        
+                }
                 if(category == 'NSFW 🔥'){
 
                     if(!message.channel.nsfw){

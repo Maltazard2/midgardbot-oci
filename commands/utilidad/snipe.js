@@ -7,7 +7,7 @@ module.exports =  {
     use: '<prefix>snipe [#canal]',
     owner: true,
     vip: false,
-    slash: false,
+    slash: true,
   
     async execute(client, message, args, Discord) {
 

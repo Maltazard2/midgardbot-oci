@@ -7,7 +7,7 @@ module.exports =  {
     use: '<prefix>user [@user/id]',
     owner: false,
     vip: false,
-    slash: false,
+    slash: true,
 
     async execute(client, message, args, Discord) {
 
