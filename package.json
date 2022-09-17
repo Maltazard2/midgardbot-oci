@@ -1,7 +1,7 @@
 {
   "name": "midgard-bot",
   "version": "1.2.1",
-  "description": "Bot Oficial de Midgard",
+  "description": "Bot de Discord subido al servidor virtual de Oracle mediante SSH",
   "main": "index.js",
   "engines": {
     "node": "16.x",
